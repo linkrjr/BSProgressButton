@@ -219,9 +219,9 @@
         }
     }
     
-    if ( self.textAligment ) {
+    if ( self.textAlignment ) {
       
-      self.completionButton.contentHorizontalAlignment = self.textAligment
+      self.completionButton.contentHorizontalAlignment = self.textAligment;
       
     }
     
