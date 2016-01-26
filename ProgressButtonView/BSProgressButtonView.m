@@ -19,7 +19,7 @@
 @property (nonatomic, strong) UIColor *p_textColor;
 @property (nonatomic, assign) CGFloat p_textFontSize;
 @property (nonatomic, strong) UIFont *p_textFont;
-@property (nonatomic, strong) UIControlContentHorizontalAlignment *p_textAlignment;
+@property (nonatomic, assign) UIControlContentHorizontalAlignment *p_textAlignment;
 @property (nonatomic, copy) NSString *p_text;
 @property (nonatomic, assign) NSInteger p_progress;
 @property (nonatomic, assign) BOOL p_animateUpdateProgress;
