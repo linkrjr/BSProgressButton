@@ -218,15 +218,12 @@
             self.completionButton.titleLabel.font = titleFont;
         }
     }
-    
-    if ( self.textAlignment ) {
-      
-      self.completionButton.contentHorizontalAlignment = self.textAlignment;
-      
-    }
-    
+        
     NSString *text = self.text ?: self.p_text;
     [self.completionButton setTitle:text forState:UIControlStateNormal];
+    self.completionButton.contentEdgeInsets = UIEdgeInsetsMake(0, 20, 0, 20);  
+    
+    self.completionButton.contentHorizontalAlignment = self.textAlignment ?: self.p_textAlignment;    
 }
 
 - (void)updateProgress:(CGFloat)progress
@@ -347,6 +344,13 @@
 - (void)setTextFontSize:(CGFloat)textFontSize
 {
     _textFontSize = textFontSize;
+    
+    [self updateSubviews];
+}
+
+- (void)setTextAlignment:(UIControlContentHorizontalAlignment)textAlignment
+{
+    _textAlignment = textAlignment;
     
     [self updateSubviews];
 }
