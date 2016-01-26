@@ -29,6 +29,7 @@ typedef void(^BSProgressButtonCompletionBlock)();
 @property (nonatomic, strong) IBInspectable UIColor *textColor;
 @property (nonatomic, assign) IBInspectable CGFloat textFontSize;
 @property (nonatomic, copy) IBInspectable NSString *textFontName;
+@property (nonatomic, strong) IBInspectable UIControlContentHorizontalAlignment *textAlignment;
 @property (nonatomic, strong) UIFont *textFont;
 
 @property (nonatomic, copy) IBInspectable NSString *text;

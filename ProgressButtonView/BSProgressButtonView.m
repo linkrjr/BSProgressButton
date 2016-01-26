@@ -19,6 +19,7 @@
 @property (nonatomic, strong) UIColor *p_textColor;
 @property (nonatomic, assign) CGFloat p_textFontSize;
 @property (nonatomic, strong) UIFont *p_textFont;
+@property (nonatomic, strong) UIControlContentHorizontalAlignment *p_textAlignment;
 @property (nonatomic, copy) NSString *p_text;
 @property (nonatomic, assign) NSInteger p_progress;
 @property (nonatomic, assign) BOOL p_animateUpdateProgress;
@@ -81,6 +82,7 @@
     self.p_progressViewColor = [self.p_bgViewColor colorWithAlphaComponent:1.f];
     self.p_textColor = [UIColor colorWithWhite:1.f alpha:0.95f];
     self.p_textFontSize = 16.f;
+    self.p_textAlignment = UIControlContentHorizontalAlignmentCenter;
     self.p_textFont = [UIFont systemFontOfSize:self.p_textFontSize];
     self.p_animateUpdateProgress = YES;
     self.p_animationUpdateProgressDuration = 0.3f;
@@ -215,6 +217,12 @@
         {
             self.completionButton.titleLabel.font = titleFont;
         }
+    }
+    
+    if ( self.textAligment ) {
+      
+      self.completionButton.contentHorizontalAlignment = self.textAligment
+      
     }
     
     NSString *text = self.text ?: self.p_text;
